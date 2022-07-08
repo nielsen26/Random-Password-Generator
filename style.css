@@ -6,14 +6,16 @@ body {
 .container {
     background-color: #1F2937;
     margin: 100px auto auto;
-    width: 500px;
+    width: min(500px, 100%);
     border-radius: 20px;
     padding: 25px;
 }
 
 .results_container {
-    border-style: dashed;
-    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
 }
 
 hr {
@@ -55,6 +57,13 @@ h1 {
 }
 
 .result {
-    border-style: dashed;
-    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Inter';
+    text-align: center;
+    color: #55F991;
+    padding-top: 10px;
+    margin: 5px;
+    height: 30px;
+    width: 225px;
+    background-color: #2F3E53;
 }
