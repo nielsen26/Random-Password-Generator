@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random Password Generator</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Karla"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 id="first_line">Generate a</h1>
+			<h1 id="second_line">random password</h1>
+			<p id="desc">Never use an insecure password again.</p>
+
+			<form>
+				<input
+					id="generate_btn"
+					type="button"
+					value="Generate passwords"
+					onclick="generate_pass()"
+				/><br />
+			</form>
+			<br />
+			<hr />
+			<div class="results_container">
+				<p class="result" id="result_one">test</p>
+				<p class="result" id="result_two">test</p>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
