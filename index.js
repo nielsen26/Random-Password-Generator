@@ -16,10 +16,17 @@ const sym = ["~","`","!","@","#","$","%","^","&","*","(",")",
 "_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
 
 const results = document.querySelectorAll(".result")
+const passlen = document.querySelector("#pass_length")
 
 let length = 15
 
 function generate_pass() {
+    let input_len = parseInt(passlen.value)
+
+    if (input_len >= 8 && input_len <= 25) {
+        length = input_len
+    }
+
     for (let n = 0; n < results.length; n++) {
         let password = ""
         for (let i = 0; i < length; i++) {
@@ -33,13 +40,10 @@ for (let i = 0; i < results.length; i++) {
     results[i].addEventListener("click", function(){
         const copyText = results[i]
 
-        /* Select the text field */
-        copyText.select()
-        copyText.setSelectionRange(0, 99999) /* For mobile devices */
-
         /* Copy the text inside the text field */
-        navigator.clipboard.writeText(copyText.value)
+        navigator.clipboard.writeText(copyText.textContent)
 
-        alert("Copied the text: " + copyText.value)
+        alert("Copied the text: " + copyText.textContent)
     })
 }
+

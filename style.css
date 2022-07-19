@@ -46,6 +46,32 @@ h1 {
     font-size: 100%;
 }
 
+label {
+    color: #9CA3AF;
+    font-family: 'Inter';
+    font-size: 100%;
+}
+
+input {
+    margin: 5px auto;
+}
+
+#pass_length {
+    border-radius: 2px;
+    background-color: #2F3E53;
+    color: #55F991;
+    border-style: none;
+    padding: 5px;
+    outline-style: none;
+    height: 20px;
+}
+
+#copy_msg {
+    text-align: center;
+    color: #55F991;
+    font-family: 'Inter';
+}
+
 #generate_btn {
     background-color: #10B981;
     color: white;

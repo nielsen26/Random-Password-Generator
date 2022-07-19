@@ -22,6 +22,15 @@
 			<p id="desc">Never use an insecure password again.</p>
 
 			<form>
+				<label for="clength">Password length (Between 8 and 25)</label>
+				<br />
+				<input
+					type="text"
+					name="clength"
+					id="pass_length"
+					value="15"
+					placeholder="Password length"
+				/><br />
 				<input
 					id="generate_btn"
 					type="button"
@@ -31,6 +40,7 @@
 			</form>
 			<br />
 			<hr />
+			<p id="copy_msg">Click the generated password to copy</p>
 			<div class="results_container">
 				<div class="result" id="result1"></div>
 				<div class="result" id="result2"></div>
