@@ -12,8 +12,33 @@
 /* Styles */
 
 body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 800px 200px;
     margin: 0;
     background-color: var(--primary-back-color);
+}
+
+.footer {
+    
+    font-family: 'Karla', sans-serif;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--primary-container-color);
+    height: auto;
+    padding-top: 30px;
+    padding-left: 50px;
+    color: white;
+}
+
+.nav_icons {
+    display: flex;
+}
+
+.icon {
+    width: 24px;
+    margin-right: 8px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(109deg) brightness(104%) contrast(101%);
 }
 
 .container {
