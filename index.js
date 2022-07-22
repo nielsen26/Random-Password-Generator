@@ -26,7 +26,7 @@ function generate_pass() {
         length = 8
     } else if (input_len >= 8 && input_len <= 24) {
         length = input_len
-    } else {
+    } else if (input_len > 24) {
         length = 24
     }
 
