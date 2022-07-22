@@ -1,10 +1,24 @@
+/* Variable declarations */
+
+:root {
+    --primary-back-color: #111827;
+    --primary-container-color: #1F2937;
+    --secondary-container-color: #2F3E53;
+    --primary-green: #10B981;
+    --secondary-green: #4ADF86;
+    --regular-font-color: #9CA3AF;
+}
+
+/* Styles */
+
 body {
     margin: 0;
-    background-color: #111827;
+    background-color: var(--primary-back-color);
 }
 
 .container {
-    background-color: #1F2937;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-container-color);
     margin: 100px auto auto;
     width: min(500px, 100%);
     border-radius: 20px;
@@ -19,14 +33,14 @@ body {
 }
 
 hr {
-    color: #2F3E53;
-    background-color: #2F3E53;
+    color: var(--secondary-container-color);
+    background-color: var(--secondary-container-color);
     height: 1px;
     border-style: none;
 }
 
 h1 {
-    font-family: 'Karla';
+    font-family: 'Karla', sans-serif;
     font-size: 300%;
     font-weight: 2000;
     margin: 5px auto;
@@ -37,18 +51,16 @@ h1 {
 }
 
 #second_line {
-    color: #4ADF86;
+    color: var(--secondary-green);
 }
 
 #desc {
-    color: #9CA3AF;
-    font-family: 'Inter';
+    color: var(--regular-font-color);
     font-size: 100%;
 }
 
 label {
-    color: #9CA3AF;
-    font-family: 'Inter';
+    color: var(--regular-font-color);
     font-size: 100%;
 }
 
@@ -58,8 +70,8 @@ input {
 
 #pass_length {
     border-radius: 2px;
-    background-color: #2F3E53;
-    color: #55F991;
+    background-color: var(--secondary-container-color);
+    color: var(--secondary-green);
     border-style: none;
     padding: 5px;
     outline-style: none;
@@ -68,12 +80,11 @@ input {
 
 #copy_msg {
     text-align: center;
-    color: #55F991;
-    font-family: 'Inter';
+    color: var(--secondary-green);
 }
 
 #generate_btn {
-    background-color: #10B981;
+    background-color: var(--primary-green);
     color: white;
     padding: 10px 15px;
     border-style: none;
@@ -82,14 +93,17 @@ input {
     font-size: 100%;
 }
 
+.result:hover {
+    background-color: #364864;
+}
+
 .result {
     border-radius: 5px;
-    font-family: 'Inter';
     text-align: center;
-    color: #55F991;
+    color: var(--secondary-green);
     padding-top: 10px;
     margin: 5px;
     height: 30px;
     width: 225px;
-    background-color: #2F3E53;
+    background-color: var(--secondary-container-color);
 }
