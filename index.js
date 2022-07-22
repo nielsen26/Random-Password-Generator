@@ -40,6 +40,7 @@ function generate_pass() {
 }
 
 function main() {
+    generate_pass()
     for (let i = 0; i < results.length; i++) {
         results[i].addEventListener("click", function(){
             const copyText = results[i]
