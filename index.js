@@ -22,9 +22,12 @@ let length = 15
 
 function generate_pass() {
     let input_len = parseInt(passlen.value)
-
-    if (input_len >= 8 && input_len <= 25) {
+    if (input_len < 8) {
+        length = 8
+    } else if (input_len >= 8 && input_len <= 24) {
         length = input_len
+    } else {
+        length = 24
     }
 
     for (let n = 0; n < results.length; n++) {
@@ -36,14 +39,18 @@ function generate_pass() {
     }
 }
 
-for (let i = 0; i < results.length; i++) {
-    results[i].addEventListener("click", function(){
-        const copyText = results[i]
+function main() {
+    for (let i = 0; i < results.length; i++) {
+        results[i].addEventListener("click", function(){
+            const copyText = results[i]
 
-        /* Copy the text inside the text field */
-        navigator.clipboard.writeText(copyText.textContent)
+            if (copyText.textContent == "") return 
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.textContent)
 
-        alert("Copied the text: " + copyText.textContent)
-    })
+            alert("Copied the password: " + copyText.textContent)
+        })
+    }
 }
 
+main()
