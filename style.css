@@ -20,7 +20,7 @@ body {
 }
 
 .footer {
-    
+    text-align: center;
     font-family: 'Karla', sans-serif;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -33,11 +33,12 @@ body {
 
 .nav_icons {
     display: flex;
+    justify-content: center;
 }
 
 .icon {
     width: 24px;
-    margin-right: 8px;
+    margin: 0 10px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(109deg) brightness(104%) contrast(101%);
 }
 
